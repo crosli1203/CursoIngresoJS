@@ -20,17 +20,11 @@ function mostrar() {
             break;
 
 
-        case "Enero":
-        case "Marzo":
-        case "Mayo":
-        case "Julio":
-        case "Agosto":
-        case "Octubre":
-        case "Diciembre":
+        default:
             alert("Si tiene 31");
 
             break;
 
 
-        }
-    }//FIN DE LA FUNCIÓN
+    }
+}//FIN DE LA FUNCIÓN

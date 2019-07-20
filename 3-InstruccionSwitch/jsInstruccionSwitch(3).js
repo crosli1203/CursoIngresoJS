@@ -8,17 +8,7 @@ function mostrar() {
         case "Febrero":
             alert("Este mes no tiene mas de 29 dias");
             break;
-        case "Enero":
-        case "Marzo":
-        case "Abril":
-        case "Mayo":
-        case "Junio":
-        case "Julio":
-        case "Agosto":
-        case "Septiembre":
-        case "Octubre":
-        case "Noviembre":
-        case "Diciembre":
+        default:
             alert("Este mes tiene mas de 30 dias");
 
             break;
