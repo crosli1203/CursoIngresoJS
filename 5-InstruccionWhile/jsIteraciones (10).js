@@ -1,46 +1,71 @@
-function mostrar()
-{
-
-	var contador=0;
+function mostrar() {
 	var numero;
-	var numeroDos;
-	var suma;
-	alert(numero);
-	numeroDos=12;
-	suma=numero*numeroDos;
-	alert(suma);
-	suma=3 //bien
-	suma="2" //bien
-    suma="lalala"; //error
-	//if(isNaN(suma))
-	//{
-		//alert("error");
-	
-		//}
-	//else{
-		//alert("bien");
-	
-		//}
-		while((isNaN(suma))&& (suma<0)|| (suma>10))
-		{
-			alert("error");
-			suma=prompt("error;reingrese solo numero ");
-		
+	var contador = 0;
+	var contadorNegativos = 0;
+	var contadorPositivos = 0;
+	var acumuladorPositivos = 0;
+	var acumuladorNegativos = 0;
+	var contadorCeros = 0;
+	var contadorPares = 0;
+	var promedioPositivos;
+	var promedioNegativos;
+
+
+
+	var respuesta = true;
+
+	while (respuesta == true) {
+		numero = prompt("Ingrese un numero : ");
+		numero = parseInt(numero);
+
+		if (numero > 0) {
+
+			contadorPositivos++;
+			acumuladorPositivos += numero;
+		}
+		else {
+
+			if (numero < 0) {
+
+				contadorNegativos++;
+				acumuladorNegativos += numero;
+
 			}
-			alert("ingreso correcto "+suma);
-			while(sexo!="f" && sexo!="m")
-	
-		
+			else {
+				contadorCeros++;
+			}
+			if (numero % 2 == 0) {
+				contadorPares++;
 
-	//declarar contadores y variables 
-	
-	//var respuesta="si";
+			}
 
-	//while(respuesta!="no")
-	//
-		
-	
-	//}
+		}
+		respuesta = confirm("Desea ingresar otro numero : ");
+
+	}
+	if (contadorPositivos != 0) {
+		promedioPositivos = acumuladorPositivos / contadorPositivos;
+	}
+	else {
+		promedioPositivos = "No se ingresaron numeros positivos"
+	}
+	if (contadorNegativos != 0) {
+		promedioNegativos = acumuladorNegativos / contadorNegativos;
+	}
+	else {
+		promedioNegativos = "No se ingresaron numeros Negativos"
+	}
+
+
+
+	document.write("suma de Positovos: " + acumuladorPositivos + "<br>");
+	document.write("suma de Negativos: " + acumuladorNegativos + "<br>");
+	document.write("cantidad de Positovos: " + contadorPositivos + "<br>");
+	document.write("cantidad de Negativos: " + contadorNegativos + "<br>");
+	document.write("cantidad de ceros: " + cantidadCeros + "<br>");
+	document.write("cantida de pares: " + contadorPares + "<br>");
+	document.write("promedioNegativos: " + promedioNegativos + "<br>");
+	document.write("promedioPositivos: " + promedioPositivos + "<br>");
 
 
 
