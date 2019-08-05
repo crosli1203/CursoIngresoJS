@@ -1,14 +1,25 @@
-function mostrar()
-{
+function mostrar() {
+	var numero;
+	var acumuladorpositivos= 0;
+	var acumuladornegativos= 0;
+	var contadorPositivos= 0;
+	var contadornegativos= 0;
 
-	var contador=0;
-	var positivo=0;
-	var negativo=1;
-	
-	var respuesta='si';
+	var respuesta = true;
 
+	while (respuesta == true) {
 
-document.getElementById('suma').value=positivo;
-document.getElementById('producto').value=negativo;
+		numero=prompt(" ingrese un numero");
+		parseInt(numero);
+		if(numero >0){
+			
+			acumuladorpositivos+=numero;
 
-}//FIN DE LA FUNCIÓN
+		}
+			respuesta = confirm("Desea ingresar otro numero : ");
+
+		}
+		document.getElementById('suma').value = acumuladorpositivos;
+		document.getElementById('producto').value = contadornegativos;
+
+	}//FIN DE LA FUNCIÓN
