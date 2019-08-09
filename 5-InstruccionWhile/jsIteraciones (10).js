@@ -12,17 +12,16 @@ function mostrar() {
 	var diferencia = 0;
 	var respuesta = true;
 
-	
+
 
 	while (respuesta == true) {
-		numero = prompt("Ingrese un numero : ");
-		numero = parseInt(numero);
 
+		numero = parseInt(prompt("Ingrese un numero : "));
 		//contador de numeros positivos y acumulador/suma de numeros positivos
 		if (numero > 0) {
 
-			numero = prompt("Ingrese un numero : ");
-		numero = parseInt(numero);
+			contadorPositivos++;
+			acumuladorPositivos += numero;
 		}
 		else {
 			//contador de numeros negativos y acumulador/suma de numeros negativos
@@ -61,7 +60,7 @@ function mostrar() {
 
 	diferencia = contadorPositivos - contadorNegativos;
 
-	document.write("suma de Positovos: " + acumuladorPositivos + "<br>");
+	document.write("suma de Positivos: " + acumuladorPositivos + "<br>");
 	document.write("suma de Negativos: " + acumuladorNegativos + "<br>");
 	document.write("cantidad de Positivos: " + contadorPositivos + "<br>");
 	document.write("cantidad de Negativos: " + contadorNegativos + "<br>");
